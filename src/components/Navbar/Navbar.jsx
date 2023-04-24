@@ -1,6 +1,7 @@
 import React from 'react'
-import Navbaritem from './Navbaritem'
-import { GrCart } from "react-icons/gr";
+import Navbaritem from '../Navbaritem/Navbaritem'
+import Cartwidget from '../CartWidget/Cartwidget'
+
 
 const Navbar = (props) => {
     const item = ['Inicio','Productos','Nosotros','Contacto']
@@ -17,7 +18,7 @@ const Navbar = (props) => {
                         {item.map((texto,index) =>(
                             <Navbaritem texto={texto} key={index}/>
                         ))}
-                        <Navbaritem texto={<GrCart></GrCart>}/>
+                        <Cartwidget/>
                     </ul>
                 </div>
             </div>
