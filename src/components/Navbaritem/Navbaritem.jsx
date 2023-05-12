@@ -1,15 +1,11 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom';
 
 const Navbaritem = (props) => {
     return (
-        <div>
             <li className="nav-item">
-                <p className="nav-link active m-1" aria-current="page" >
-                    {props.texto}
-                </p>
+                <NavLink className={"nav-link active m-1"} aria-current={"page"} to={props.path} >{props.name}</NavLink>
             </li>
-        </div>
     )
 }
 
