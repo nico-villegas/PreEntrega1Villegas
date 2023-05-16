@@ -1,9 +1,10 @@
 import React from 'react'
+import Itemlistcontainer from '../components/ItemListContainer/ItemListContainer'
 
 const Home = () => {
     return (
         <div>
-            <h2>Hola</h2>
+            <Itemlistcontainer/>
         </div>
     )
 }
