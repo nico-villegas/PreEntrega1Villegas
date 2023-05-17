@@ -1,20 +1,40 @@
 .container{
     width: 65%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin-bottom: 20px auto;
 }
 
 .card{
-    margin-bottom: 10px;
-}
+    /* margin-bottom: 10px;
+    background-color: #0d1c27; */
 
-.card-body{
-    text-align: justify;
+    border: 2px solid #ffcc99;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #0d1c27;
+    transition: 1s;
 }
 
 .card img{
     width: 100%;
 }
+
+.card-body{
+    text-align: justify;
+    color: #e47c5d;
+}
+
+.btn-ver-mas{
+    border: 3px solid #ffcc99;
+    text-decoration: none;
+    color: #0d1c27;
+    background-color: #ffcc99;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+
 
 @media(min-width: 480px){
     .container{
@@ -23,7 +43,7 @@
         gap: 15px;
     }
     .card{
-        margin: 0;
+        margin-top: 20px;
     }
     .card-body{
         flex-grow: 1;

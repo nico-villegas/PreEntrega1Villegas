@@ -1,0 +1,13 @@
+.container-detail{
+    width: 400px;
+    height: 400px;
+}
+
+.card{
+    height: 80%;
+    width: 80%;
+}
+
+.card img-detail{
+    width:  400px;
+}

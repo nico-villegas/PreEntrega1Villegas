@@ -1,6 +1,9 @@
 import React from 'react'
+import './NavBar.css'
+import logo from '../../img/logo-nuevo-color.png'
 import Navbaritem from '../NavBaritem/NavBaritem'
 import Cartwidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 
 
@@ -13,38 +16,34 @@ const Navbar = (props) => {
             name: "Imperiales",
         },
         {
-            path: "/category/camioneros",
+            path: "/category/camionero",
             name: "Camioneros"
         },
         {
-            path: "/category/torpedos",
+            path: "/category/torpedo",
             name: "Torpedos"
         }
     ]
 
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
+        <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
-                <p className="navbar-brand" >{props.navbarLogo}</p>
+                <Link to='/'>
+                    <img id='logo-home' src={logo} alt="logo-home"/>
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
                     <ul className="navbar-nav">
                         {
                             nav_item.map(({ path, name }, index) => (
                                 <Navbaritem path={path} name={name} key={index} />
                             ))
                         }
-                        <Cartwidget />
+                        <Cartwidget className='carrito'/>
                     </ul>
-                    {/*  <ul>
-                        <NavLink to={`/category/imperial`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} />
-                        <NavLink to={`/category/camioneros`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} />
-                        <NavLink to={`/category/torpedos`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} />
-
-                    </ul> */}
                 </div>
             </div>
         </nav>
