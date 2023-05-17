@@ -1,4 +1,4 @@
-import  './ItemCount.css'
+import './ItemCount.css'
 import React from 'react'
 import { useState } from 'react'
 
@@ -16,22 +16,20 @@ const ItemCount = ({ stock, initial/* , onAdd  */ }) => {
 
 
     return (
-        <div className='container'>
-            <div className=' d-md-flex justify-content-center align-items-center flex-column '>
-                <div className='row'>
-                    <div className='col'>
-                        <button type="button" className="btn btn-primary btn-sm" onClick={increment}>+</button>
-                    </div>
-                    <div className='col'> 
-                        <h4 className='m-0'>{quantity}</h4>
-                    </div>
-                    <div className='col'>
-                        <button type="button" className="btn btn-primary btn-sm" onClick={decrement}>-</button>
-                    </div>
+        <div className=' d-md-flex  align-items-center flex-column '>
+            <div className='row'>
+                <div className='col'>
+                    <button type="button" className="btn btn-primary btn-sm" onClick={increment}>+</button>
                 </div>
                 <div className='col'>
-                    <button type='button' className="btn btn-primary btn-sm">Agregar al carrito</button>
+                    <h4 className='m-0'>{quantity}</h4>
                 </div>
+                <div className='col'>
+                    <button type="button" className="btn btn-primary btn-sm" onClick={decrement}>-</button>
+                </div>
+            </div>
+            <div className='col'>
+                <button type='button' className="btn btn-primary btn-sm">Agregar al carrito</button>
             </div>
         </div>
     )

@@ -1,9 +1,9 @@
 import React from 'react'
-import ImgProductos, {img} from '../../img/ImgProductos'
-/* import { NavLink } from 'react-router-dom' */
+import "./Item.css";
+import { Link } from 'react-router-dom';
 
 
-const Item = ({ id, nombre, precio, stock, alt }) => {
+const Item = ({ id, nombre, precio, stock, img, alt }) => {
     return (
         <div className="card">
             <img src={img} className="card-img-top" alt={alt} />
@@ -11,7 +11,9 @@ const Item = ({ id, nombre, precio, stock, alt }) => {
                 <h5 className="card-title">{nombre}</h5>
                 <p className="card-text">Precio: ${precio}</p>
                 <p className="card-text">Cantidad disponible: {stock}</p>
-                <button type='button' className="btn btn-primary btn-sm">Ver mas</button>
+            </div>
+            <div>
+                <Link to={`/item/${id}`} type='button' className="btn-ver-mas btn btn-primary btn-sm"> Ver detalle </Link>
             </div>
         </div>
     )

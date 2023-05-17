@@ -9,26 +9,18 @@ import torpedoMarron from '../img/mate-torpedo-acero-marron.jpg'
 import torpedoNegro from '../img/mate-torpedo-acero-negro.jpg'
 import torpedoCincelado from '../img/mate-torpedo-cincelado.jpg'
 
-import React from 'react'
 
-const ImgProductos = () => {
-    const img = [
-        logo,
-        camioneroAcero,
-        camioneroAlpaca,
-        camioneroCincelado,
-        imperialCincelado,
-        imperialLisoVirola,
-        imperialLiso,
-        torpedoMarron,
-        torpedoNegro,
-        torpedoCincelado
-    ]
 
-    return (
-        img
-    )
-}
-
-export default ImgProductos
+export default [
+    logo,
+    imperialCincelado,
+    imperialLiso,
+    imperialLisoVirola,
+    camioneroAlpaca,
+    camioneroCincelado,
+    camioneroAcero,
+    torpedoCincelado,
+    torpedoMarron,
+    torpedoNegro
+]
 

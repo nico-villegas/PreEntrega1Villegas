@@ -9,20 +9,16 @@ const Navbar = (props) => {
 
     const nav_item = [
         {
-            path: "/productos",
-            name: "Productos"
+            path: "/category/imperial",
+            name: "Imperiales",
         },
         {
-            path: "/tips",
-            name: "Tips"
+            path: "/category/camioneros",
+            name: "Camioneros"
         },
         {
-            path: "/nosotros",
-            name: "Nosotros"
-        },
-        {
-            path: "/contacto",
-            name: "Contacto"
+            path: "/category/torpedos",
+            name: "Torpedos"
         }
     ]
 
@@ -43,6 +39,12 @@ const Navbar = (props) => {
                         }
                         <Cartwidget />
                     </ul>
+                    {/*  <ul>
+                        <NavLink to={`/category/imperial`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} />
+                        <NavLink to={`/category/camioneros`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} />
+                        <NavLink to={`/category/torpedos`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} />
+
+                    </ul> */}
                 </div>
             </div>
         </nav>

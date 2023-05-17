@@ -1,3 +1,5 @@
+import imagen from '../src/img/ImgProductos'
+
 const products = [
     {
         id: 1,
@@ -5,8 +7,9 @@ const products = [
         precio: 10000,
         descripcion: 'Mate imperial premium',
         stock: 15,
-        img: '../../img/mate-imperial-cincelado.jpg',
-        alt: 'imagen imperial cincelado'
+        img: imagen[1],
+        alt: 'imagen imperial cincelado',
+        category: 'imperial'
     },
     {
         id: 2,
@@ -14,44 +17,49 @@ const products = [
         precio: 8000,
         descripcion: 'Mate imperial liso de acero inoxidable',
         stock: 10,
-        img: '../../img/mate-imperial-liso.jpg',
-        alt: 'imagen imperial liso'
+        img: imagen[2],
+        alt: 'imagen imperial liso',
+        category: 'imperial'
     },
     {
         id: 3,
-        nombre: 'Imperial Cincelado con virola lisa',
+        nombre: 'Imperial cincelado con virola lisa',
         precio: 9000,
         descripcion: 'Mate imperial cincelado con virola lisa',
         stock: 13,
-        img: '../../img/mate-imperial-cincelado-con-virola-lisa.jpg',
-        alt: 'imagen imperial cincelado virola lisa'
+        img: imagen[3],
+        alt: 'imagen imperial cincelado virola lisa',
+        category: 'imperial'
     },
     {
         id: 4,
-        nombre: 'Camionero alpaca cincelado',
+        nombre: 'Camionero de alpaca cincelada',
         precio: 5000,
         descripcion: 'Mate camionero de alpaca cincelada',
         stock: 8,
-        img: '../../img/mate-camionero-alpaca-cincelado.jpg',
-        alt: 'imagen camionero alpaca cincelada'
+        img: imagen[4],
+        alt: 'imagen camionero alpaca cincelada',
+        category: 'camionero'
     },
     {
         id: 5,
-        nombre: 'Camionero acero inoxidable cincelado',
+        nombre: 'Camionero de acero inoxidable cincelado',
         precio: 4500,
         descripcion: 'Mate camionero de acero inoxidable con virola cincelada',
         stock: 20,
-        img: '../../img/mate-camionero-cincelado.jpg',
-        alt: 'imagen camionero virola cincelada'
+        img: imagen[5],
+        alt: 'imagen camionero virola cincelada',
+        category: 'camionero'
     },
     {
         id: 6,
-        nombre: 'Camionero acero inoxidable',
+        nombre: 'Camionero de acero inoxidable',
         precio: 4000,
         descripcion: 'Mate camionero con virola de acero inoxidable',
         stock: 6,
-        img: '../../img/mate-camionero-acero.jpg',
-        alt: 'imagen camionero acero'
+        img: imagen[6],
+        alt: 'imagen camionero acero',
+        category: 'camionero'
     },
     {
         id: 7,
@@ -59,17 +67,29 @@ const products = [
         precio: 5000,
         descripcion: 'Mate torpedo con virola cincelada',
         stock: 7,
-        img: '../../img/mate-torpedo-cincelado.jpg',
-        alt: 'imagen torpedo cincelado'
+        img: imagen[7],
+        alt: 'imagen torpedo cincelado',
+        category: 'torpedo'
     },
     {
         id: 8,
-        nombre: 'Torpedo acero inoxidable marrón',
+        nombre: 'Torpedo de acero inoxidable marrón',
         precio: 3500,
         descripcion: 'Mate torpedo marrón con virola de acero',
         stock: 14,
-        img: '../../img/mate-torpedo-acero-marron.jpg',
-        alt: 'imagen torpedo marron'
+        img: imagen[8],
+        alt: 'imagen torpedo marron',
+        category: 'torpedo'
+    },
+    {
+        id: 9,
+        nombre: 'Torpedo de acero inoxidable negro',
+        precio: 3500,
+        descripcion: 'Mate torpedo marrón con virola de acero',
+        stock: 25,
+        img: imagen[9],
+        alt: 'imagen torpedo negro',
+        category: 'torpedo'
     }
 ]
 
@@ -78,5 +98,21 @@ export const getProducts = () => {
         setTimeout(() => {
             resolve(products)
         }, 500);
+    })
+}
+
+export const getProductById = (productId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === productId))
+        }, 500)
+    })
+}
+
+export const getProductByCategory = (productCategory) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.category === productCategory))
+        }, 500)
     })
 }
