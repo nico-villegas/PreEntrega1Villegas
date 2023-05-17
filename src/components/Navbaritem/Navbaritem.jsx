@@ -1,4 +1,5 @@
 import React from 'react'
+import './NavBaritem.css'
 import { NavLink } from 'react-router-dom';
 
 const Navbaritem = (props) => {

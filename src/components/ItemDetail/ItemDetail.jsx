@@ -1,18 +1,21 @@
 import React from 'react'
+import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({ id, nombre, precio, descripcion, stock, img, alt, category }) => {
     return (
-        <div className="card">
+        <div className="card-detail card">
             <div className="card-body">
-                <img src={img} className='img-detail' alt={alt} />
-                <h5 className="card-title">{nombre}</h5>
-                <div>
+                <div className='card-img'>
+                    <img src={img} className='img-detail' alt={alt} />
+                </div>
+                <div className='card-content'>
+                    <h5>{nombre}</h5>
                     <p className="card-text">Categoria: {category}</p>
                     <p className="card-text"> {descripcion}</p>
                     <p className="card-text">Precio: ${precio}</p>
                 </div>
-                <div>
+                <div className='card-count'>
                     <ItemCount initial={1} stock={stock} />
                 </div>
             </div>

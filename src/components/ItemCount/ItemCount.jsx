@@ -16,20 +16,20 @@ const ItemCount = ({ stock, initial/* , onAdd  */ }) => {
 
 
     return (
-        <div className=' d-md-flex  align-items-center flex-column '>
+        <div className='contein-count d-md-flex  align-items-center flex-column '>
             <div className='row'>
-                <div className='col'>
-                    <button type="button" className="btn btn-primary btn-sm" onClick={increment}>+</button>
+                <div className='col d-flex justify-content-center align-items-center'>
+                    <button type="button" className="btn btn-sm" onClick={increment}>+</button>
                 </div>
-                <div className='col'>
+                <div className='col d-flex justify-content-center align-items-center'>
                     <h4 className='m-0'>{quantity}</h4>
                 </div>
-                <div className='col'>
-                    <button type="button" className="btn btn-primary btn-sm" onClick={decrement}>-</button>
+                <div className='col d-flex justify-content-center align-items-center'>
+                    <button type="button" className="btn btn-sm" onClick={decrement}>-</button>
                 </div>
             </div>
-            <div className='col'>
-                <button type='button' className="btn btn-primary btn-sm">Agregar al carrito</button>
+            <div className='col d-flex justify-content-center align-items-center'>
+                <button type='button' className="btn btn-sm d-flex justify-content-center align-items-center">Agregar al carrito</button>
             </div>
         </div>
     )
