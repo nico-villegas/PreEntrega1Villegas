@@ -29,6 +29,7 @@ const ItemDetail = ({ id, nombre, precio, descripcion, stock, img, alt, category
                             <Link to='/cart' className='Option'>Finalizar compra</Link>
                         ) : (
                             <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
+                            
                         )
                     }
                 </div>
