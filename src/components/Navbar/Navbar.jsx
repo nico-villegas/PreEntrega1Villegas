@@ -42,7 +42,6 @@ const Navbar = (props) => {
                                 <Navbaritem path={path} name={name} key={index} />
                             ))
                         }
-                        
                         <Cartwidget className='carrito'/>
                     </ul>
                 </div>
