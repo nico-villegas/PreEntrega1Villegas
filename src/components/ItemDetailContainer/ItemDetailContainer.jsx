@@ -35,7 +35,8 @@ const ItemDetailContainer = () => {
     return (
         <section className='container-detail d-flex justify-content-center aling-items-center'>
             {loading && <h1>Cargando...</h1>}
-            <ItemDetail {...product} />
+            {!loading && <ItemDetail {...product} />}
+            
         </section>
     )
 }
